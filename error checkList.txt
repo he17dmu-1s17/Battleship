@@ -1,0 +1,4 @@
+possible error: lack of "lost and found" calls
+error: "if/else" statement not wrapping over all actions within statement
+error: number error in declaration " Square(colomn 0, row 0) fix=Square[column 10, row 10] 
+error: lack of arrows describing direction in Class Diagram for endGame() 
