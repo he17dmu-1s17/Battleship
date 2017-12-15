@@ -1,0 +1,5 @@
+Review Check List for Sequence Diagrams
+***************************************
+01. Message syntax incorrect
+02. Guard expression uses implicit message
+03. Non-sequential control flow
