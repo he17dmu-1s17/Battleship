@@ -5,3 +5,5 @@ Review Check List for Sequence Diagrams
 03. Non-sequential control flow
 04. Identifier incorrectly spelled
 05. Identifier not defined before being used
+06. Lack of Arrows describing direction
+07. reference to diagram within diagram file
