@@ -6,4 +6,5 @@ Review Check List for Sequence Diagrams
 04. Identifier incorrectly spelled
 05. Identifier not defined before being used
 06. Lack of Arrows describing direction
-07. reference to diagram within diagram file
+07. Reference to a diagram has to be in its own seperate file
+08. Autocorrect capital letters
