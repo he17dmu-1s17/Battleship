@@ -1,4 +1,0 @@
-Review Check List for Design Class Diagrams
-*******************************************
-01. Missing relation
-02. Class name not capitalized
