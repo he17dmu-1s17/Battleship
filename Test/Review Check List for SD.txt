@@ -1,0 +1,10 @@
+Review Check List for Sequence Diagrams
+***************************************
+01. Message syntax incorrect
+02. Guard expression uses implicit message
+03. Non-sequential control flow
+04. Identifier incorrectly spelled
+05. Identifier not defined before being used
+06. Lack of Arrows describing direction
+07. Reference to a diagram has to be in its own seperate file
+08. Autocorrect capital letters

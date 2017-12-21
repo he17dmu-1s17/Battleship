@@ -1,0 +1,14 @@
+Review Procedure
+****************
+
+1. Use a check list to identify problems with the artifact under review.
+
+2. Add any new (previously unlisted) problem types the existing check list.
+
+3. Fix the identified problems and maintain a complete list of fixes.
+
+4. Use the list of fixes to verify the correctness of each fix with the author(s) of the artifact.
+
+5. Approve the artifact when all fixes have been approved by the original author(s).
+
+6. Merge the approved artifact with master.
