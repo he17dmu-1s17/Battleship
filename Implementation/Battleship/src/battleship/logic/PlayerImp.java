@@ -32,4 +32,10 @@ public class PlayerImp implements Player {
 		return null;
 	}
 
+	@Override
+	public boolean allShipsSunk() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

@@ -11,7 +11,7 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public boolean isReadyToStart() {
-
+		// vi har ikke noget getShip
 		return false;
 	}
 
@@ -29,20 +29,21 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public void startGame() {
-		// TODO Auto-generated method stub
+		if (isReadyToStart()) {
+			// vi har ikke noget gamestarted
+		}
 
 	}
 
 	@Override
 	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public boolean isGameOver() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isGameOver() { // problem
+		gameOver = true;
+		return gameOver;
 	}
 
 	@Override
@@ -53,20 +54,42 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public Square takeShot(int column, int row) {
-		// TODO Auto-generated method stub
-		return null;
+		Square squre;
+		squre = player2.shoot(column, row);
+		endTurn();
+		return squre;
 	}
 
 	@Override
 	public void initializeGame() {
-		// TODO Auto-generated method stub
+		Player player1 = new PlayerImp();
+		Player Player2 = new PlayerImp();
 
 	}
 
 	@Override
 	public Player getWinner() {
-		// TODO Auto-generated method stub
-		return null;
+		return endGame();
+	}
+
+	private Player endGame() {
+		// vi skal laver allShipsSunk metud i player
+		Player winner;
+		gameOver = true;
+		if (player1.allShipsSunk()) {
+			winner = player2;
+		} else {
+			winner = player1;
+		}
+		return winner;
+	}
+
+	@Override
+	public Grid getFleetGrid() {// vi har glemt den i interface
+		while (!isGameOver())
+			return null;
+		return curentPlayer.getFleetGrid();
+
 	}
 
 }

@@ -22,5 +22,6 @@ public interface BattleshipController {
 	public void initializeGame();
 	
 	public Player getWinner();
+	public Grid getFleetGrid();
 
 }
