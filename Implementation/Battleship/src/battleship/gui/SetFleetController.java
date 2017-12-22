@@ -19,7 +19,7 @@ public class SetFleetController {
 	BattleshipController BS = BattleshipLauncher.battleshipController;
 	ObservableList<Boolean> isHorizontal = FXCollections.observableArrayList(true, false);
 	ObservableList<ShipClass> fleets = BS.getShipList();
-	
+
 	@FXML
 	private GridPane fleetBoard;
 
@@ -48,13 +48,10 @@ public class SetFleetController {
 	void clicked(ActionEvent event) {
 		for (int column = 1; column < size; column++) {
 			for (int row = 1; row < size; row++) {
-				if (fleetBoard.getColumnIndex((Node) event.getSource()) != column
-						& fleetBoard.getRowIndex((Node) event.getSource()) != row) {
-//					System.out.println(column);
-//					System.out.println(row);
-
-					((ToggleButton) getNodeFromGridPane(fleetBoard, column, row)).setSelected(false);
-				}
+				if (fleetBoard.getColumnIndex((Node) event.getSource()) == column
+						& fleetBoard.getRowIndex((Node) event.getSource()) == row) {
+					((ToggleButton) getNodeFromGridPane(fleetBoard, column, row)).setSelected(true);
+				} else ((ToggleButton) getNodeFromGridPane(fleetBoard, column, row)).setSelected(false);
 			}
 		}
 	}
@@ -77,26 +74,26 @@ public class SetFleetController {
 		int column = -1;
 		int row = -1;
 		try {
-		column = fleetBoard.getColumnIndex((Node) isSelected())-1;
-		row = fleetBoard.getRowIndex((Node) isSelected())-1;
+			column = fleetBoard.getColumnIndex((Node) isSelected()) - 1;
+			row = fleetBoard.getRowIndex((Node) isSelected()) - 1;
 		} catch (Exception ex) {
 			status.setText("No starting point selected");
 		}
 		boolean isHorizontal;
-		isHorizontal= orientation.getValue();
-		
+		isHorizontal = orientation.getValue();
+
 		if (column != -1 && row != -1) {
 			try {
-			BS.placeShip(shipClass, column, row, isHorizontal);
-			updateGrid();
-			status.setText("Whoop!");
-		} catch (OutOfBoundsException oob) {
-			status.setText("oob");
-		} catch (AlreadyPlacedException ap) {
-			status.setText("ap");
-		} catch (SquareOccupiedException so) {
-			status.setText("so");
-		}
+				BS.placeShip(shipClass, column, row, isHorizontal);
+				updateGrid();
+				status.setText("Whoop!");
+			} catch (OutOfBoundsException oob) {
+				status.setText("oob");
+			} catch (AlreadyPlacedException ap) {
+				status.setText("ap");
+			} catch (SquareOccupiedException so) {
+				status.setText("so");
+			}
 		}
 	}
 
@@ -113,7 +110,7 @@ public class SetFleetController {
 		Grid grid = BS.getFleetGrid();
 		for (int column = 1; column < size; column++) {
 			for (int row = 1; row < size; row++) {
-				if (grid.isOccupied(column-1, row-1)) {
+				if (grid.isOccupied(column - 1, row - 1)) {
 					getNodeFromGridPane(fleetBoard, column, row).setStyle("-fx-background-color: pink");
 				} else {
 					getNodeFromGridPane(fleetBoard, column, row).setStyle("-fx-background-color: blue");
@@ -132,7 +129,7 @@ public class SetFleetController {
 		fleet.setItems(fleets);
 		fleet.getSelectionModel().select(0);
 	}
-	
+
 	public ToggleButton isSelected() {
 		for (int column = 1; column < size; column++) {
 			for (int row = 1; row < size; row++) {
