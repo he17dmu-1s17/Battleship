@@ -14,4 +14,6 @@ public interface Square {
 	
 	public void receiveShot() throws AlreadyShotException;
 
+	public SquareStatus getStatus();
+
 }
