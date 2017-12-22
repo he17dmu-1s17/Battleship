@@ -4,12 +4,13 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleship.gui.SetFleetController">
+<GridPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleship.gui.SetFleetController">
    <columnConstraints>
       <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints maxWidth="550.0" minWidth="550.0" prefWidth="550.0" />
@@ -56,106 +57,109 @@
             <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="4" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="5" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="6" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="7" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="8" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="9" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="10" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="10" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="10" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="10" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="10" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="10" />
-            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gridToggle" />
+               </toggleGroup></ToggleButton>
+            <ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="1">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="1">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="1">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="1">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="1">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="2">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="3">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="4">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="5">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="6">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="7">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="8">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="9">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="10">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="10">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="10">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="10">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="10">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="10">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="10">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="10">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="10">
+            <toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton><ToggleButton minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="10"><toggleGroup><ToggleGroup fx:id="gridToggle" /></toggleGroup></ToggleButton>
             <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="A" textAlignment="CENTER" GridPane.columnIndex="1">
                <font>
                   <Font size="36.0" />

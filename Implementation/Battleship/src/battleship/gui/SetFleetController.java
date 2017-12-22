@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -20,6 +21,9 @@ public class SetFleetController {
 	@FXML
 	private GridPane fleetBoard;
 
+    @FXML
+    private ToggleGroup gridToggle;
+    
 	@FXML
 	private ComboBox<?> fleet;
 
@@ -40,15 +44,15 @@ public class SetFleetController {
 	
 	@FXML
 	void clicked(ActionEvent event) {
-		for (int column = 1; column < size; column++) {
-			for (int row = 1; row < size; row++) {
-				if (fleetBoard.getColumnIndex((Node) event.getSource()) != column && fleetBoard.getRowIndex((Node) event.getSource()) != row) {
-					System.out.println(column);System.out.println(row);
-					
-					((ToggleButton) getNodeFromGridPane(fleetBoard, column, row)).setSelected(false);
-				}
-			}
-		}
+//		for (int column = 1; column < size; column++) {
+//			for (int row = 1; row < size; row++) {
+//				if (fleetBoard.getColumnIndex((Node) event.getSource()) != column && fleetBoard.getRowIndex((Node) event.getSource()) != row) {
+//					System.out.println(column);System.out.println(row);
+//					
+//					((ToggleButton) getNodeFromGridPane(fleetBoard, column, row)).setSelected(false);
+//				}
+//			}
+//		}
 	}
 
 	@FXML
