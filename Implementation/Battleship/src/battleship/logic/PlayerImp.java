@@ -29,7 +29,7 @@ public class PlayerImp implements Player {
 	}
 
 	@Override
-	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) throws AlreadyPlacedException {
+	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) throws AlreadyPlacedException, OutOfBoundsException, SquareOccupiedException {
 		if (ships.get(shipClass).isPlaced()) {
 			throw new AlreadyPlacedException();
 		} else {
@@ -49,14 +49,15 @@ public class PlayerImp implements Player {
 
 	@Override
 	public boolean allShipsSunk() {
-		// TODO Auto-generated method stub
-		return false;
+		if(ships.get(ShipClass.Carrier).isSunk() && ships.get(ShipClass.Battleship).isSunk() && ships.get(ShipClass.Cruiser).isSunk() && ships.get(ShipClass.Submarine).isSunk() && ships.get(ShipClass.Destroyer).isSunk())
+			return true;
+		else
+			return false;
 	}
 
 	@Override
 	public HashMap getShips() {
-		// TODO Auto-generated method stub
-		return null;
+		return ships;
 	}
 
 	public String getName() {
