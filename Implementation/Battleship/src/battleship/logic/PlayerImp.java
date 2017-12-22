@@ -16,11 +16,10 @@ public class PlayerImp implements Player {
 		fleetGrid = new GridImp();
 		targetGrid = new GridImp();
 		ships = new HashMap<ShipClass, Ship>();
-		ships.put(ShipClass.Carrier, new ShipImp(ShipClass.Carrier));
-		ships.put(ShipClass.Battleship, new ShipImp(ShipClass.Battleship));
-		ships.put(ShipClass.Cruiser, new ShipImp(ShipClass.Cruiser));
-		ships.put(ShipClass.Submarine, new ShipImp(ShipClass.Submarine));
-		ships.put(ShipClass.Destroyer, new ShipImp(ShipClass.Destroyer));
+
+		// Generating ships
+		for(ShipClass shipClass : ShipClass.values())
+			ships.put(shipClass, new ShipImp(shipClass));
 	}
 
 	@Override
