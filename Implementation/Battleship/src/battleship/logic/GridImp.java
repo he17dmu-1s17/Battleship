@@ -63,5 +63,8 @@ public class GridImp implements Grid {
 		return squares[column][row].isOccupied();
 	
 	}
+	public SquareStatus getSquareStatus(int column, int row) {
+		return squares[column][row].getStatus();
+	}
 
 }
