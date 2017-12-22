@@ -56,7 +56,7 @@ public class PlayerImp implements Player {
 	}
 
 	@Override
-	public HashMap getShips() {
+	public HashMap<ShipClass, ShipImp> getShips() {
 		return ships;
 	}
 
