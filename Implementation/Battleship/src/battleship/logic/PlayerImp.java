@@ -4,24 +4,23 @@ import java.util.HashMap;
 
 public class PlayerImp implements Player {
 
-	private Player opponent;
-	private Grid fleetGrid;
-	private Grid targetGrid;
-	private HashMap<String, Ship> ships;
+	private PlayerImp opponent;
+	private GridImp fleetGrid;
+	private GridImp targetGrid;
+	private HashMap<ShipClass, ShipImp> ships;
 	private String name;
 	
 
-	public PlayerImp(String name, Player opponent) {
+	public PlayerImp(String name) {
 		this.name = name;
-		this.opponent = opponent;
-		fleetGrid = new Grid();
-		targetGrid = new Grid();
-		ships = new HashMap<String, Ship>();
-		ships.put("Carrier", new Ship(Carrier));
-		ships.put("Battleship", new Ship(Battleship));
-		ships.put("Cruiser", new Ship(Cruiser));
-		ships.put("Submarine", new Ship(Submarine));
-		ships.put("Destroyer", new Ship(Destroyer));
+		fleetGrid = new GridImp();
+		targetGrid = new GridImp();
+		ships = new HashMap<ShipClass, ShipImp>();
+		ships.put(ShipClass.Carrier, new ShipImp(ShipClass.Carrier));
+		ships.put(ShipClass.Battleship, new ShipImp(ShipClass.Battleship));
+		ships.put(ShipClass.Cruiser, new ShipImp(ShipClass.Cruiser));
+		ships.put(ShipClass.Submarine, new ShipImp(ShipClass.Submarine));
+		ships.put(ShipClass.Destroyer, new ShipImp(ShipClass.Destroyer));
 	}
 
 	@Override
@@ -30,7 +29,7 @@ public class PlayerImp implements Player {
 	}
 
 	@Override
-	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) {
+	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) throws AlreadyPlacedException {
 		if (ships.get(shipClass).isPlaced()) {
 			throw new AlreadyPlacedException();
 		} else {
