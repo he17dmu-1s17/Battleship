@@ -261,11 +261,12 @@
       <ComboBox fx:id="fleet" prefWidth="150.0" promptText="Select Ship" GridPane.columnIndex="3" GridPane.rowIndex="1" />
       <ComboBox fx:id="orientation" prefWidth="150.0" promptText="Select Orientation" GridPane.columnIndex="3" GridPane.rowIndex="2" />
       <Button fx:id="setship" mnemonicParsing="false" onAction="#setship" prefHeight="25.0" prefWidth="96.0" text="Set ship" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-      <Label fx:id="PlayerName" text="PlayerX" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+      <Label fx:id="playerName" text="PlayerX" GridPane.columnIndex="1" GridPane.valignment="CENTER">
          <font>
             <Font size="70.0" />
          </font>
       </Label>
+      <Label fx:id="status" text="Status" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.valignment="TOP" />
       <Button fx:id="done" mnemonicParsing="false" onAction="#done" prefHeight="25.0" prefWidth="95.0" text="Done" GridPane.columnIndex="4" GridPane.rowIndex="5" />
    </children>
 </GridPane>
