@@ -126,19 +126,19 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public String getCurrentPlayerName() {
-		// TODO Auto-generated method stub
+		
 		return currentPlayer.getName() ;
 	}
 
 	@Override
 	public String getPlayer1Name() {
-		// TODO Auto-generated method stub
+	
 		return player1.getName();
 	}
 
 	@Override
 	public String getPlayer2Name() {
-		// TODO Auto-generated method stub
+	
 		return player2.getName();
 	}
 
