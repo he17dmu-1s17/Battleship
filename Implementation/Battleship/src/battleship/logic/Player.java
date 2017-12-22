@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface Player {
 	
-	public Square shoot(int column, int row);
+	public Square shoot(int column, int row) throws AlreadyShotException;
 	
 	public Grid getTargetGrid();
 	
