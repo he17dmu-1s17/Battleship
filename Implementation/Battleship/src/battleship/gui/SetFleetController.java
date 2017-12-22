@@ -24,7 +24,7 @@ public class SetFleetController {
 	private ComboBox<?> fleet;
 
 	@FXML
-	private ComboBox<?> orientation;
+	private ComboBox<Boolean> orientation;
 
 	@FXML
 	private Button setship;
@@ -43,6 +43,8 @@ public class SetFleetController {
 		for (int column = 1; column < size; column++) {
 			for (int row = 1; row < size; row++) {
 				if (fleetBoard.getColumnIndex((Node) event.getSource()) != column && fleetBoard.getRowIndex((Node) event.getSource()) != row) {
+					System.out.println(column);System.out.println(row);
+					
 					((ToggleButton) getNodeFromGridPane(fleetBoard, column, row)).setSelected(false);
 				}
 			}
@@ -94,5 +96,10 @@ public class SetFleetController {
 
 			}
 		}
+	}
+
+	public void setOrientationList() {
+		orientation.setItems(isHorizontal);
+		
 	}
 }
