@@ -7,7 +7,7 @@ public class PlayerImp implements Player {
 	private PlayerImp opponent;
 	private GridImp fleetGrid;
 	private GridImp targetGrid;
-	private HashMap<ShipClass, ShipImp> ships;
+	private HashMap<ShipClass, Ship> ships;
 	private String name;
 	
 
@@ -15,7 +15,7 @@ public class PlayerImp implements Player {
 		this.name = name;
 		fleetGrid = new GridImp();
 		targetGrid = new GridImp();
-		ships = new HashMap<ShipClass, ShipImp>();
+		ships = new HashMap<ShipClass, Ship>();
 		ships.put(ShipClass.Carrier, new ShipImp(ShipClass.Carrier));
 		ships.put(ShipClass.Battleship, new ShipImp(ShipClass.Battleship));
 		ships.put(ShipClass.Cruiser, new ShipImp(ShipClass.Cruiser));
@@ -56,7 +56,7 @@ public class PlayerImp implements Player {
 	}
 
 	@Override
-	public HashMap<ShipClass, ShipImp> getShips() {
+	public HashMap<ShipClass, Ship> getShips() {
 		return ships;
 	}
 
