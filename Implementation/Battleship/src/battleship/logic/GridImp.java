@@ -22,7 +22,7 @@ public class GridImp implements Grid {
 						if (squares[column][row].isOccupied()) {
 							throw new SquareOccupiedException();
 						} else {
-							squares[column][row].placeShip(ship, column, row);
+							squares[column][row].placeShip(ship);
 							size--;
 						}
 
@@ -40,7 +40,7 @@ public class GridImp implements Grid {
 						if (squares[column][row].isOccupied()) {
 							throw new SquareOccupiedException();
 						} else {
-							squares[column][row].placeShip(ship, column, row);
+							squares[column][row].placeShip(ship);
 							size--;
 						}
 

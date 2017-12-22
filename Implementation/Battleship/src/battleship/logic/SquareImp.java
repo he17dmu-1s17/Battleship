@@ -15,7 +15,7 @@ public class SquareImp implements Square {
 	}
 
 	@Override
-	public void placeShip(Ship ship, int column, int row) throws SquareOccupiedException {
+	public void placeShip(Ship ship) throws SquareOccupiedException {
 		if(isOccupied()) {
 			// isoccupied exception
 			throw new SquareOccupiedException();
