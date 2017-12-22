@@ -48,10 +48,10 @@ public class PlayerImp implements Player {
 
 	@Override
 	public boolean allShipsSunk() {
-		if(ships.get(ShipClass.Carrier).isSunk() && ships.get(ShipClass.Battleship).isSunk() && ships.get(ShipClass.Cruiser).isSunk() && ships.get(ShipClass.Submarine).isSunk() && ships.get(ShipClass.Destroyer).isSunk())
-			return true;
-		else
-			return false;
+		for(Ship ship : ships.values())
+			if(!ship.isSunk())
+				return false;
+		return true;
 	}
 
 	@Override
