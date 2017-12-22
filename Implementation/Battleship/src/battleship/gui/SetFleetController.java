@@ -59,7 +59,9 @@ public class SetFleetController {
 
 	@FXML
 	void done(ActionEvent event) {
-		BS.setupDone();
+		if (BS.isCurrentPlayerReady()) {
+			BS.setupDone();
+		}
 	}
 
 	@FXML
@@ -68,6 +70,10 @@ public class SetFleetController {
 		int column = fleetBoard.getColumnIndex((Node) event.getSource())-1;
 		int row = fleetBoard.getRowIndex((Node) event.getSource())-1;
 		boolean isHorizontal = orientation.getValue();
+		System.out.println("" + shipClass);
+		System.out.println("" + column);
+		System.out.println("" + row);
+		System.out.println("" + isHorizontal);
 		
 		try {
 			BS.placeShip(shipClass, column, row, isHorizontal);

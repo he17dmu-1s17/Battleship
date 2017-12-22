@@ -25,7 +25,7 @@ public interface BattleshipController {
 	
 	public Grid getFleetGrid();
 
-	public Object getCurrentPlayerName();
+	public String getCurrentPlayerName();
 
 	public String getPlayer1Name();
 
@@ -34,5 +34,7 @@ public interface BattleshipController {
 	public ObservableList<ShipClass> getShipList();
 
 	public void setupDone();
+
+	public boolean isCurrentPlayerReady();
 
 }
