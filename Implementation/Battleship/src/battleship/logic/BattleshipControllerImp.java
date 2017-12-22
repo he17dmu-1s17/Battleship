@@ -15,6 +15,10 @@ public class BattleshipControllerImp implements BattleshipController {
 		this.player2 = player2;
 	}
 
+	public BattleshipControllerImp() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public boolean isReadyToStart() {
 
@@ -123,6 +127,24 @@ public class BattleshipControllerImp implements BattleshipController {
 			return null;
 		return currentPlayer.getFleetGrid();
 
+	}
+
+	@Override
+	public String getCurrentPlayerName() {
+		// TODO Auto-generated method stub
+		return currentPlayer.getName() ;
+	}
+
+	@Override
+	public String getPlayer1Name() {
+		// TODO Auto-generated method stub
+		return player1.getName();
+	}
+
+	@Override
+	public String getPlayer2Name() {
+		// TODO Auto-generated method stub
+		return player2.getName();
 	}
 
 }
