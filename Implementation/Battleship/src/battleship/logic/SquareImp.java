@@ -7,11 +7,7 @@ public class SquareImp implements Square {
 	
 	
 	public boolean isOccupied() {
-		if(ship !=null) {
-			return true;
-		}else {
-		return false;
-		}
+		return ship != null ? true : false;
 	}
 
 	@Override
