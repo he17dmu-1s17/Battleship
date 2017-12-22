@@ -36,6 +36,7 @@ public class BattleshipControllerImp implements BattleshipController {
 			}
 		}
 		return false;
+		
 	}
 
 	@Override
@@ -60,7 +61,7 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal)
-			throws AlreadyPlacedException {
+			throws AlreadyPlacedException, OutOfBoundsException, SquareOccupiedException {
 		currentPlayer.placeShip(shipClass, column, row, isHorizontal);
 	}
 
