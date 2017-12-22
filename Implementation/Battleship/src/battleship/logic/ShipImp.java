@@ -37,4 +37,11 @@ public class ShipImp implements Ship {
 		damage++;
 	}
 
+
+	@Override
+	public void donePlacing() {
+		placed = true;
+		
+	}
+
 }

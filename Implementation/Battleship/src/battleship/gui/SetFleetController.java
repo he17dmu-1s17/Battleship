@@ -63,6 +63,9 @@ public class SetFleetController {
 	void done(ActionEvent event) {
 		if (BS.isCurrentPlayerReady()) {
 			BS.setupDone();
+			playerName.setText(BS.getCurrentPlayerName());
+			status.setText("Next player");
+			updateGrid();
 		} else {
 			status.setText("Not all ships placed");
 		}
@@ -113,7 +116,7 @@ public class SetFleetController {
 				if (grid.isOccupied(column-1, row-1)) {
 					getNodeFromGridPane(fleetBoard, column, row).setStyle("-fx-background-color: pink");
 				} else {
-
+					getNodeFromGridPane(fleetBoard, column, row).setStyle("-fx-background-color: blue");
 				}
 
 			}
