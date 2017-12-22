@@ -1,29 +1,37 @@
 package battleship.logic;
 
 public class ShipImp implements Ship {
-
+ private int damage;
+ private boolean placed;
+ private ShipClass shipClass;
+ 
+ 	public ShipImp(ShipClass shipClass) {
+ 		this.shipClass = shipClass;
+ 		placed = false;
+ 		damage = 0;
+ 	}
 	@Override
 	public int getSize() {
-		// TODO Auto-generated method stub
-		return 0;
+		int size=shipClass.getSize();
+		return size;
 	}
 
 	@Override
 	public boolean isSunk() {
-		// TODO Auto-generated method stub
-		return false;
+		if(damage == getSize())
+		return true;
+		else return false;
 	}
 
 	@Override
 	public boolean isPlaced() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return placed;
 	}
 
 	@Override
 	public void receiveDamage() {
-		// TODO Auto-generated method stub
-
+		damage++;
 	}
 
 }
