@@ -8,10 +8,11 @@ public class BattleshipControllerImp implements BattleshipController {
 	private Player curentPlayer;
 	private boolean isReadyToStart;
 	private boolean gameOver;
+	private boolean gameStarted;//jeg har tilføjet den vi mangler den i complate DCD
 
 	@Override
 	public boolean isReadyToStart() {
-		// vi har ikke noget getShip
+		
 		return false;
 	}
 
@@ -29,9 +30,7 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public void startGame() {
-		if (isReadyToStart()) {
-			// vi har ikke noget gamestarted
-		}
+		
 
 	}
 
@@ -42,8 +41,7 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public boolean isGameOver() { // problem
-		gameOver = true;
-		return gameOver;
+		return false;
 	}
 
 	@Override
@@ -55,7 +53,7 @@ public class BattleshipControllerImp implements BattleshipController {
 	@Override
 	public Square takeShot(int column, int row) {
 		Square squre;
-		squre = player2.shoot(column, row);
+		squre = curentPlayer.shoot(column, row);
 		endTurn();
 		return squre;
 	}

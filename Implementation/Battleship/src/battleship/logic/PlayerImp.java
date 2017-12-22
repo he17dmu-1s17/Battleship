@@ -1,5 +1,7 @@
 package battleship.logic;
 
+import java.util.List;
+
 public class PlayerImp implements Player {
 
 	@Override
@@ -36,6 +38,12 @@ public class PlayerImp implements Player {
 	public boolean allShipsSunk() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public List[] getShips() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
