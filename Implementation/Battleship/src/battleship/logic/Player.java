@@ -6,7 +6,7 @@ public interface Player {
 	
 	public Grid getTargetGrid();
 	
-	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal);
+	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) throws AlreadyPlacedException;
 
 	public Grid getFleetGrid();
 	
