@@ -1,5 +1,6 @@
 package battleship.gui;
 
+import battleship.logic.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -41,15 +42,21 @@ public class SetFleetController {
 
     @FXML
     void setship(ActionEvent event) {
+    	ShipClass shipClass;
+    	int column;
+    	int row;
+    	boolean isHorizontal;
+    	BattleshipController BS;
+    	
     	try {
-    	battleshipController.placeShip(shipClass, column, row, isHorizontal);
-    	Grid grid = battleshipController.getFleetGrid();
-    	for (int column = 1; column<size; column++) {
-    		for ( int row = 1; row<size; row++) {
-    			if (grid.isOccupied(column,row)) {
-    				getNodeFromGridPane(fleetBoard, column, row).setStyle("-fx-background-color: pink");
+    	BS.placeShip(shipClass, column, row, isHorizontal);
+    	Grid grid = BS.getFleetGrid();
+    	for (int col = 1; col<size; col++) {
+    		for ( int ro = 1; ro<size; ro++) {
+    			if (grid.isOccupied(col,ro)) {
+    				getNodeFromGridPane(fleetBoard, col, ro).setStyle("-fx-background-color: pink");
     			} else {
-    				getNodeFromGridPane(fleetBoard, column, row).setStyle("-fx-background-color: blue");
+    				getNodeFromGridPane(fleetBoard, col, ro).setStyle("-fx-background-color: blue");
     			}
     			
     			
@@ -57,7 +64,7 @@ public class SetFleetController {
     		}
     	}
     	}
-    catch(outofbounds) {
+    catch(OutOfBoundsException oob) {
     	
     }
     }
