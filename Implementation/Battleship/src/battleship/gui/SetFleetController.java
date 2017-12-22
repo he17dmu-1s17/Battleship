@@ -43,7 +43,7 @@ public class SetFleetController {
     void setship(ActionEvent event) {
     	try {
     	battleshipController.placeShip(shipClass, column, row, isHorizontal);
-    	Grid grid = battleshipController.getFleetGrid()
+    	Grid grid = battleshipController.getFleetGrid();
     	for (int column = 1; column<size; column++) {
     		for ( int row = 1; row<size; row++) {
     			if (grid.isOccupied(column,row)) {
