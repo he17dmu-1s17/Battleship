@@ -24,7 +24,7 @@ public class PlayerImp implements Player {
 	}
 
 	@Override
-	public Square shoot(int column, int row) {
+	public Square shoot(int column, int row) throws AlreadyShotException {
 		return fleetGrid.shoot(column, row);
 	}
 
