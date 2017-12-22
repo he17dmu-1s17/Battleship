@@ -8,4 +8,6 @@ public interface Grid {
 
 	public boolean isOccupied(int i, int j);
 
+	public SquareStatus getSquareStatus(int column, int row);
+
 }

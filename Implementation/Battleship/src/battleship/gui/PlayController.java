@@ -1,6 +1,7 @@
 package battleship.gui;
 
 import battleship.logic.BattleshipController;
+import battleship.logic.BattleshipControllerImp;
 import battleship.logic.Grid;
 import battleship.logic.Player;
 import battleship.logic.SquareStatus;
