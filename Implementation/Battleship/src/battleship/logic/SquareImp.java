@@ -1,23 +1,53 @@
 package battleship.logic;
 
 public class SquareImp implements Square {
-
-	@Override
+	
+	Ship ship;
+	SquareStatus status= SquareStatus.Untargeted;
+	
+	
 	public boolean isOccupied() {
-		// TODO Auto-generated method stub
+		if(ship !=null) {
+			return true;
+		}else {
 		return false;
+		}
 	}
 
 	@Override
-	public void placeShip(Ship ship, int column, int row) {
-		// TODO Auto-generated method stub
+	public void placeShip(Ship ship, int column, int row) throws SquareOccupiedException {
+		if(isOccupied()) {
+			// isoccupied exception
+			throw new SquareOccupiedException();
+		}else {
+			this.ship=ship;
+		}
 
 	}
 
 	@Override
-	public void receiveShot() {
-		// TODO Auto-generated method stub
-
+	public void receiveShot() throws AlreadyShotException {
+		if (ship != null) {
+			if(SquareStatus.Untargeted != null) {
+				ship.receiveDamage();
+				ship.isSunk();
+				if(ship.isSunk()) {
+					// status = sunk
+					status = SquareStatus.Sunk;
+					
+				}else {
+					// status = hit
+					status = SquareStatus.Hit;
+				}
+				
+			}else {
+				// alreadyshotexception
+				throw new AlreadyShotException();
+			}
+		}else {
+			// status = miss
+			status = SquareStatus.Miss;
+		}
 	}
 
 }

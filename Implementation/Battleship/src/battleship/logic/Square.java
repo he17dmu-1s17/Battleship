@@ -8,9 +8,10 @@ public interface Square {
 	 * @param ship
 	 * @param column probably isn't needed
 	 * @param row probably isn't needed
+	 * @throws SquareOccupiedException 
 	 */
-	public void placeShip(Ship ship, int column, int row);
+	public void placeShip(Ship ship, int column, int row) throws SquareOccupiedException;
 	
-	public void receiveShot();
+	public void receiveShot() throws AlreadyShotException;
 
 }

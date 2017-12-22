@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class BattleshipControllerImp implements BattleshipController {
 	private Player player1;
 	private Player player2;
-	private Player curentPlayer;
+	private Player currentPlayer;
 	private boolean isReadyToStart;
 	private boolean gameOver;
 	private boolean gameStarted;// jeg har tilføjet den vi mangler den i complate DCD
@@ -51,8 +51,8 @@ public class BattleshipControllerImp implements BattleshipController {
 	}
 
 	@Override
-	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) {
-		curentPlayer.placeShip(shipClass, column, row, isHorizontal);
+	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) throws AlreadyPlacedException {
+		currentPlayer.placeShip(shipClass, column, row, isHorizontal);
 	}
 
 	@Override
@@ -62,22 +62,27 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public void endTurn() {
-		// TODO Auto-generated method stub
+		if(getWinner()==null) {
+			if(currentPlayer==player1)
+				currentPlayer=player2;
+			else 
+				currentPlayer=player1;
+		}
 
 	}
 
 	@Override
 	public Square takeShot(int column, int row) {
 		Square squre;
-		squre = curentPlayer.shoot(column, row);
+		squre = currentPlayer.shoot(column, row);
 		endTurn();
 		return squre;
 	}
 
 	@Override
 	public void initializeGame() {
-		Player player1 = new PlayerImp();
-		Player player2 = new PlayerImp();
+		Player player1 = new PlayerImp("Player 1");
+		Player player2 = new PlayerImp("Player 2");
 		BattleshipControllerImp battleshipController = new BattleshipControllerImp(player1, player2);
 	}
 
@@ -88,23 +93,25 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	private Player endGame() {
 		// vi skal laver allShipsSunk metud i Player
-		Player winner;
-		gameOver = true;
+		Player winner=null;
 		if (player1.allShipsSunk()) {
 			winner = player2;
-		} else {
+			gameOver = true;
+		} 
+		if (player2.allShipsSunk()) {
 			winner = player1;
-		}
+			gameOver = true;
+		} 
 		return winner;
 	}
 
 	@Override
 	public Grid getFleetGrid() {// vi har glemt den i interface
 		if(!gameStarted)
-			return curentPlayer.getFleetGrid();
+			return currentPlayer.getFleetGrid();
 		if (!isGameOver())
 			return null;
-		return curentPlayer.getFleetGrid();
+		return currentPlayer.getFleetGrid();
 
 	}
 
