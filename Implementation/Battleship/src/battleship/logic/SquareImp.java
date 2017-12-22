@@ -3,7 +3,7 @@ package battleship.logic;
 public class SquareImp implements Square {
 	
 	Ship ship;
-	SquareStatus status= SquareStatus.Untargeted;
+	SquareStatus status;
 	
 	
 	public boolean isOccupied() {
@@ -48,6 +48,12 @@ public class SquareImp implements Square {
 			// status = miss
 			status = SquareStatus.Miss;
 		}
+	}
+
+	@Override
+	public SquareStatus getStatus() {
+		
+		return status;
 	}
 
 }
