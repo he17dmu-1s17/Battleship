@@ -11,13 +11,13 @@ public interface BattleshipController {
 	
 	public void startGame();
 	
-	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) throws AlreadyPlacedException;
+	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) throws AlreadyPlacedException, OutOfBoundsException, SquareOccupiedException;
 	
 	public boolean isGameOver();
 	
 	public void endTurn();
 	
-	public Square takeShot(int column, int row);
+	public Square takeShot(int column, int row) throws AlreadyShotException;
 	
 	public void initializeGame();
 	

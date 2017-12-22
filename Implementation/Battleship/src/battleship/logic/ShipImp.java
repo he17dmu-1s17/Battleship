@@ -5,6 +5,10 @@ public class ShipImp implements Ship {
 	private ShipClass shipClass;
 	
 	
+	public ShipImp(ShipClass carrier) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public int getSize() {
 		// TODO Auto-generated method stub
