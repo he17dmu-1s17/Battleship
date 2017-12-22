@@ -1,5 +1,6 @@
 package battleship.gui;
 
+import battleship.BattleshipLauncher;
 import battleship.logic.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,8 +16,9 @@ import javafx.scene.layout.GridPane;
 
 public class SetFleetController {
 	private int size = 11;
-	BattleshipController BS = null;
+	BattleshipController BS = BattleshipLauncher.battleshipController;
 	ObservableList<Boolean> isHorizontal = FXCollections.observableArrayList(true, false);
+	ObservableList<ShipClass> fleets = BS.getShipList();
 	
 	@FXML
 	private GridPane fleetBoard;
@@ -25,7 +27,7 @@ public class SetFleetController {
     private ToggleGroup gridToggle;
     
 	@FXML
-	private ComboBox<?> fleet;
+	private ComboBox<ShipClass> fleet;
 
 	@FXML
 	private ComboBox<Boolean> orientation;
@@ -104,6 +106,9 @@ public class SetFleetController {
 
 	public void setOrientationList() {
 		orientation.setItems(isHorizontal);
-		
+	}
+	
+	public void setFleetList() {
+		fleet.setItems(fleets);
 	}
 }

@@ -1,5 +1,7 @@
 package battleship.logic;
 
+import javafx.collections.ObservableList;
+
 public interface BattleshipController {
 	
 	/**
@@ -18,8 +20,6 @@ public interface BattleshipController {
 	public void endTurn();
 	
 	public Square takeShot(int column, int row) throws AlreadyShotException;
-
-	public void initializeGame();
 	
 	public Player getWinner();
 	
@@ -30,5 +30,7 @@ public interface BattleshipController {
 	public String getPlayer1Name();
 
 	public String getPlayer2Name();
+
+	public ObservableList<ShipClass> getShipList();
 
 }

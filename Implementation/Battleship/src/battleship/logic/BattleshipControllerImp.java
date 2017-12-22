@@ -2,6 +2,8 @@ package battleship.logic;
 
 import java.util.HashMap;
 
+import javafx.collections.ObservableList;
+
 public class BattleshipControllerImp implements BattleshipController {
 	private Player player1;
 	private Player player2;
@@ -94,13 +96,6 @@ public class BattleshipControllerImp implements BattleshipController {
 	}
 
 	@Override
-	public void initializeGame() {
-		Player player1 = new PlayerImp("Player 1");
-		Player player2 = new PlayerImp("Player 2");
-		BattleshipControllerImp battleshipController = new BattleshipControllerImp(player1, player2);
-	}
-
-	@Override
 	public Player getWinner() {
 		return endGame();
 	}
@@ -145,6 +140,12 @@ public class BattleshipControllerImp implements BattleshipController {
 	public String getPlayer2Name() {
 		// TODO Auto-generated method stub
 		return player2.getName();
+	}
+
+	@Override
+	public ObservableList<ShipClass> getShipList() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
