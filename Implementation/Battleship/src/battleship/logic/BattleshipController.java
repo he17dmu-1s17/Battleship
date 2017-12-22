@@ -18,8 +18,7 @@ public interface BattleshipController {
 	public void endTurn();
 	
 	public Square takeShot(int column, int row) throws AlreadyShotException;
-	
-	
+
 	public void initializeGame();
 	
 	public Player getWinner();

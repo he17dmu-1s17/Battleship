@@ -2,6 +2,14 @@ package battleship.logic;
 
 public class ShipImp implements Ship {
 
+<<<<<<< HEAD
+	private ShipClass shipClass;
+	
+	
+	public ShipImp(ShipClass carrier) {
+		// TODO Auto-generated constructor stub
+	}
+=======
  private int damage;
  private boolean placed;
  private ShipClass shipClass;
@@ -11,6 +19,7 @@ public class ShipImp implements Ship {
  		placed = false;
  		damage = 0;
  	}
+
 
 
 	@Override
