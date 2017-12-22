@@ -64,7 +64,6 @@ public class BattleshipControllerImp implements BattleshipController {
 	public void initializeGame() {
 		Player player1 = new PlayerImp();
 		Player Player2 = new PlayerImp();
-
 	}
 
 	@Override
