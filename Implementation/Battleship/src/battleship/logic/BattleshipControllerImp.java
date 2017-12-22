@@ -82,7 +82,7 @@ public class BattleshipControllerImp implements BattleshipController {
 	}
 
 	@Override
-	public Square takeShot(int column, int row) {
+	public Square takeShot(int column, int row) throws AlreadyShotException {
 		Square squre;
 		squre = currentPlayer.shoot(column, row);
 		endTurn();
