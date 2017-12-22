@@ -10,4 +10,6 @@ public interface Ship {
 	
 	public void receiveDamage();
 
+	public void donePlacing();
+
 }

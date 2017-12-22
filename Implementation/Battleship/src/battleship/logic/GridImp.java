@@ -24,15 +24,21 @@ public class GridImp implements Grid {
 				if (ship.getSize() + column > 10) {
 					throw new OutOfBoundsException();
 				} else {
-					for (;size > 0; column++) {
-						if (squares[column][row].isOccupied()) {
+					boolean unOccupied = false;
+					int col = column;
+					for (int siz = size; siz > 0; col++, siz--) {
+						if (squares[col][row].isOccupied()) {
 							throw new SquareOccupiedException();
-						} else {
-							squares[column][row].placeShip(ship);
-							size--;
+						} else if (siz == 1) {
+							unOccupied = true;
 						}
-
 					}
+					for (int siz = size; siz > 0; column++, siz--) {
+						 if (unOccupied = true) {
+								squares[column][row].placeShip(ship);
+							}
+					}
+					ship.donePlacing();
 				}
 			}
 		} else {
@@ -42,15 +48,21 @@ public class GridImp implements Grid {
 				if (ship.getSize() + row >= 10) {
 					throw new OutOfBoundsException();
 				} else {
-					for (;size > 0; row++) {
-						if (squares[column][row].isOccupied()) {
+					boolean unOccupied = false;
+					int ro = row;
+					for (int siz = size; siz > 0; ro++, siz--) {
+						if (squares[column][ro].isOccupied()) {
 							throw new SquareOccupiedException();
-						} else {
-							squares[column][row].placeShip(ship);
-							size--;
+						} else if (siz == 1) {
+							unOccupied = true;
 						}
-
 					}
+					for (int siz = size; siz > 0; row++, siz--) {
+						 if (unOccupied = true) {
+								squares[column][row].placeShip(ship);
+							}
+					}
+					ship.donePlacing();
 				}
 			}
 		}
