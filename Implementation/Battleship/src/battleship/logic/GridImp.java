@@ -7,6 +7,14 @@ public class GridImp implements Grid {
 	private int size;
 
 	Square[][] squares = new Square[column][row];
+	
+	public GridImp() {
+		for (Square[] square : squares) {
+			for (Square sq : square) {
+				sq = new SquareImp();
+			}
+		}
+	}
 
 	@Override
 	public void placeShip(Ship ship, int column, int row, boolean isHorizontal) throws AlreadyPlacedException, OutOfBoundsException, SquareOccupiedException {
