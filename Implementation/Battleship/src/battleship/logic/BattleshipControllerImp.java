@@ -44,7 +44,6 @@ public class BattleshipControllerImp implements BattleshipController {
 			}
 		}
 		return isReadyToStart;
-		
 	}
 
 	@Override
@@ -55,7 +54,6 @@ public class BattleshipControllerImp implements BattleshipController {
 		} else {
 			tragetGrid = player1.getTargetGrid();
 		}
-
 		return tragetGrid;
 	}
 
@@ -64,14 +62,12 @@ public class BattleshipControllerImp implements BattleshipController {
 		while (isReadyToStart()) {
 			gameStarted = true;
 		}
-
 	}
 
 	@Override
 	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal)
 			throws AlreadyPlacedException, OutOfBoundsException, SquareOccupiedException {
 		currentPlayer.placeShip(shipClass, column, row, isHorizontal);
-		
 	}
 
 	@Override
@@ -87,7 +83,6 @@ public class BattleshipControllerImp implements BattleshipController {
 			else
 				currentPlayer = player1;
 		}
-
 	}
 
 	@Override
@@ -124,7 +119,6 @@ public class BattleshipControllerImp implements BattleshipController {
 		if (!isGameOver())
 			return null;
 		return currentPlayer.getFleetGrid();
-
 	}
 
 	@Override
@@ -159,7 +153,6 @@ public class BattleshipControllerImp implements BattleshipController {
 			currentPlayer = player2;
 		else
 			currentPlayer = player1;
-		
 	}
 
 	@Override
@@ -175,10 +168,7 @@ public class BattleshipControllerImp implements BattleshipController {
 					isCurrentPlayerReadyToStart = false;
 					break;
 				}
-
-			
-		}
+			}
 		return isCurrentPlayerReadyToStart;
 	}
-
 }
