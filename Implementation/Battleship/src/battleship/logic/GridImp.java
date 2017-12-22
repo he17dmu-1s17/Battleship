@@ -9,11 +9,9 @@ public class GridImp implements Grid {
 	Square[][] squares = new Square[column][row];
 	
 	public GridImp() {
-		for (Square[] square : squares) {
-			for (Square sq : square) {
-				sq = new SquareImp();
-			}
-		}
+		for (int col = 0; col<column; col++)
+			for (int ro = 0; ro<row; ro++)
+				squares[col][ro] = new SquareImp();
 	}
 
 	@Override
@@ -23,7 +21,7 @@ public class GridImp implements Grid {
 			if (ship.isPlaced() == true) {
 				throw new AlreadyPlacedException();
 			} else {
-				if (ship.getSize() + column >= 10) {
+				if (ship.getSize() + column > 10) {
 					throw new OutOfBoundsException();
 				} else {
 					for (;size > 0; column++) {

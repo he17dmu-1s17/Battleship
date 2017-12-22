@@ -23,9 +23,9 @@ public class SetFleetController {
 	@FXML
 	private GridPane fleetBoard;
 
-    @FXML
-    private ToggleGroup gridToggle;
-    
+	@FXML
+	private ToggleGroup gridToggle;
+
 	@FXML
 	private ComboBox<ShipClass> fleet;
 
@@ -37,50 +37,63 @@ public class SetFleetController {
 
 	@FXML
 	private Label playerName;
-	
+
 	@FXML
 	private Label status;
 
 	@FXML
 	private Button done;
-	
+
 	@FXML
 	void clicked(ActionEvent event) {
-//		for (int column = 1; column < size; column++) {
-//			for (int row = 1; row < size; row++) {
-//				if (fleetBoard.getColumnIndex((Node) event.getSource()) != column && fleetBoard.getRowIndex((Node) event.getSource()) != row) {
-//					System.out.println(column);System.out.println(row);
-//					
-//					((ToggleButton) getNodeFromGridPane(fleetBoard, column, row)).setSelected(false);
-//				}
-//			}
-//		}
+		for (int column = 1; column < size; column++) {
+			for (int row = 1; row < size; row++) {
+				if (fleetBoard.getColumnIndex((Node) event.getSource()) != column
+						& fleetBoard.getRowIndex((Node) event.getSource()) != row) {
+//					System.out.println(column);
+//					System.out.println(row);
+
+					((ToggleButton) getNodeFromGridPane(fleetBoard, column, row)).setSelected(false);
+				}
+			}
+		}
 	}
 
 	@FXML
 	void done(ActionEvent event) {
 		if (BS.isCurrentPlayerReady()) {
 			BS.setupDone();
+		} else {
+			status.setText("Not all ships placed");
 		}
 	}
 
 	@FXML
 	void setship(ActionEvent event) {
 		ShipClass shipClass = fleet.getValue();
-		int column = fleetBoard.getColumnIndex((Node) event.getSource())-1;
-		int row = fleetBoard.getRowIndex((Node) event.getSource())-1;
-		boolean isHorizontal = orientation.getValue();
-		
+		int column = -1;
+		int row = -1;
 		try {
+		column = fleetBoard.getColumnIndex((Node) isSelected())-1;
+		row = fleetBoard.getRowIndex((Node) isSelected())-1;
+		} catch (Exception ex) {
+			status.setText("No starting point selected");
+		}
+		boolean isHorizontal;
+		isHorizontal= orientation.getValue();
+		
+		if (column != -1 && row != -1) {
+			try {
 			BS.placeShip(shipClass, column, row, isHorizontal);
 			updateGrid();
 			status.setText("Whoop!");
 		} catch (OutOfBoundsException oob) {
-			status.setText("Noob");
+			status.setText("oob");
 		} catch (AlreadyPlacedException ap) {
-			status.setText("Noob");
+			status.setText("ap");
 		} catch (SquareOccupiedException so) {
-			status.setText("Noob");
+			status.setText("so");
+		}
 		}
 	}
 
@@ -92,7 +105,7 @@ public class SetFleetController {
 		}
 		return null;
 	}
-	
+
 	private void updateGrid() {
 		Grid grid = BS.getFleetGrid();
 		for (int column = 1; column < size; column++) {
@@ -100,7 +113,7 @@ public class SetFleetController {
 				if (grid.isOccupied(column-1, row-1)) {
 					getNodeFromGridPane(fleetBoard, column, row).setStyle("-fx-background-color: pink");
 				} else {
-					getNodeFromGridPane(fleetBoard, column, row).setStyle("-fx-background-color: blue");
+
 				}
 
 			}
@@ -109,9 +122,23 @@ public class SetFleetController {
 
 	public void setOrientationList() {
 		orientation.setItems(isHorizontal);
+		orientation.getSelectionModel().select(0);
 	}
-	
+
 	public void setFleetList() {
 		fleet.setItems(fleets);
+		fleet.getSelectionModel().select(0);
+	}
+	
+	public ToggleButton isSelected() {
+		for (int column = 1; column < size; column++) {
+			for (int row = 1; row < size; row++) {
+				ToggleButton toggle = (ToggleButton) getNodeFromGridPane(fleetBoard, column, row);
+				if (toggle.isSelected()) {
+					return toggle;
+				}
+			}
+		}
+		return null;
 	}
 }
