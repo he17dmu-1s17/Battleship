@@ -1,11 +1,13 @@
 package battleship.gui;
 
 import battleship.logic.*;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -13,7 +15,7 @@ import javafx.scene.layout.GridPane;
 public class SetFleetController {
 	private int size = 11;
 	BattleshipController BS = null;
-	ObservableList<Boolean> isHorizontal;
+	ObservableList<Boolean> isHorizontal = FXCollections.observableArrayList(true, false);
 	
 	@FXML
 	private GridPane fleetBoard;
@@ -38,7 +40,13 @@ public class SetFleetController {
 	
 	@FXML
 	void clicked(ActionEvent event) {
-
+		for (int column = 1; column < size; column++) {
+			for (int row = 1; row < size; row++) {
+				if (fleetBoard.getColumnIndex((Node) event.getSource()) != column && fleetBoard.getRowIndex((Node) event.getSource()) != row) {
+					((ToggleButton) getNodeFromGridPane(fleetBoard, column, row)).setSelected(false);
+				}
+			}
+		}
 	}
 
 	@FXML
@@ -49,8 +57,8 @@ public class SetFleetController {
 	@FXML
 	void setship(ActionEvent event) {
 		ShipClass shipClass = null;
-		int column = -1;
-		int row = -1;
+		int column = fleetBoard.getColumnIndex((Node) event.getSource())-1;
+		int row = fleetBoard.getRowIndex((Node) event.getSource())-1;
 		boolean isHorizontal = true;
 		
 		try {
