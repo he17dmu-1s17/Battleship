@@ -6,4 +6,6 @@ public interface Grid {
 	
 	public Square shoot(int column, int row) throws AlreadyShotException;
 
+	public boolean isOccupied(int i, int j);
+
 }

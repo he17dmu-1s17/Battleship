@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleship.gui.PlayController">
+   <columnConstraints>
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints maxWidth="550.0" minWidth="550.0" prefWidth="550.0" />
+      <ColumnConstraints maxWidth="95.0" minWidth="10.0" prefWidth="35.0" />
+      <ColumnConstraints maxWidth="550.0" minWidth="550.0" prefWidth="550.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="100.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="460.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <children>
+      <GridPane fx:id="playerOneTarget" maxHeight="550.0" maxWidth="550.0" minHeight="550.0" minWidth="550.0" prefHeight="550.0" prefWidth="550.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="4">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="A" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="B" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="C" textAlignment="CENTER" GridPane.columnIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="D" textAlignment="CENTER" GridPane.columnIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="E" textAlignment="CENTER" GridPane.columnIndex="5">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="F" textAlignment="CENTER" GridPane.columnIndex="6">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="G" textAlignment="CENTER" GridPane.columnIndex="7">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="H" textAlignment="CENTER" GridPane.columnIndex="8">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="I" textAlignment="CENTER" GridPane.columnIndex="9">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="J" textAlignment="CENTER" GridPane.columnIndex="10">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="1" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="2" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="3" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="4" textAlignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="5" textAlignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="6" textAlignment="CENTER" GridPane.rowIndex="6">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="7" textAlignment="CENTER" GridPane.rowIndex="7">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="8" textAlignment="CENTER" GridPane.rowIndex="8">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="9" textAlignment="CENTER" GridPane.rowIndex="9">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="10" textAlignment="CENTER" GridPane.rowIndex="10">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label fx:id="PlayerName" alignment="CENTER" text="PlayerX" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="playerTwoTarget" maxHeight="550.0" maxWidth="550.0" minHeight="550.0" minWidth="550.0" prefHeight="550.0" prefWidth="550.0" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="4" setDisable="true">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+            <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clicked" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="A" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="B" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="C" textAlignment="CENTER" GridPane.columnIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="D" textAlignment="CENTER" GridPane.columnIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="E" textAlignment="CENTER" GridPane.columnIndex="5">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="F" textAlignment="CENTER" GridPane.columnIndex="6">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="G" textAlignment="CENTER" GridPane.columnIndex="7">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="H" textAlignment="CENTER" GridPane.columnIndex="8">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="I" textAlignment="CENTER" GridPane.columnIndex="9">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="J" textAlignment="CENTER" GridPane.columnIndex="10">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="1" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="2" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="3" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="4" textAlignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="5" textAlignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="6" textAlignment="CENTER" GridPane.rowIndex="6">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="7" textAlignment="CENTER" GridPane.rowIndex="7">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="8" textAlignment="CENTER" GridPane.rowIndex="8">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="9" textAlignment="CENTER" GridPane.rowIndex="9">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="10" textAlignment="CENTER" GridPane.rowIndex="10">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label fx:id="PlayerName2" text="PlayerY" GridPane.columnIndex="3">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>
