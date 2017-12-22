@@ -2,6 +2,7 @@ package battleship.logic;
 
 import java.util.HashMap;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class BattleshipControllerImp implements BattleshipController {
@@ -144,8 +145,10 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public ObservableList<ShipClass> getShipList() {
-		// TODO Auto-generated method stub
-		return null;
+		ObservableList<ShipClass> list = FXCollections.observableArrayList();
+		for(ShipClass e: ShipClass.values())
+			list.add(e);
+		return list;
 	}
 
 }
