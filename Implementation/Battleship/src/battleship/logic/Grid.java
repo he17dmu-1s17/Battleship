@@ -6,4 +6,6 @@ public interface Grid {
 	
 	public Square shoot(int column, int row);
 
+	public boolean isOccupied(int col, int ro);
+
 }
