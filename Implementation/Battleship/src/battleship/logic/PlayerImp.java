@@ -7,16 +7,21 @@ public class PlayerImp implements Player {
 	private Player opponent;
 	private Grid fleetGrid;
 	private Grid targetGrid;
-	private HashMap Ships;
+	private HashMap<String, Ship> ships;
 	private String name;
 	
 
-	public PlayerImp(Player opponent, Grid fleetGrid, Grid targetGrid, HashMap Ships, String name) {
-		this.opponent = opponent;
-		this.fleetGrid = fleetGrid;
-		this.targetGrid = targetGrid;
-		this.Ships = Ships;
+	public PlayerImp(String name, Player opponent) {
 		this.name = name;
+		this.opponent = opponent;
+		fleetGrid = new Grid();
+		targetGrid = new Grid();
+		ships = new HashMap<String, Ship>();
+		ships.put("Carrier", new Ship(Carrier));
+		ships.put("Battleship", new Ship(Battleship));
+		ships.put("Cruiser", new Ship(Cruiser));
+		ships.put("Submarine", new Ship(Submarine));
+		ships.put("Destroyer", new Ship(Destroyer));
 	}
 
 	@Override
@@ -26,10 +31,10 @@ public class PlayerImp implements Player {
 
 	@Override
 	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) {
-		if (Ships.get(shipClass).isPlaced()) {
+		if (ships.get(shipClass).isPlaced()) {
 			throw new AlreadyPlacedException();
 		} else {
-			fleetGrid.placeShip(Ships.get(shipClass), column, row, isHorizontal);
+			fleetGrid.placeShip(ships.get(shipClass), column, row, isHorizontal);
 		}
 	}
 
