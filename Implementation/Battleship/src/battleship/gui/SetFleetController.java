@@ -59,25 +59,26 @@ public class SetFleetController {
 
 	@FXML
 	void done(ActionEvent event) {
-
+		BS.setupDone();
 	}
 
 	@FXML
 	void setship(ActionEvent event) {
-		ShipClass shipClass = null;
+		ShipClass shipClass = fleet.getValue();
 		int column = fleetBoard.getColumnIndex((Node) event.getSource())-1;
 		int row = fleetBoard.getRowIndex((Node) event.getSource())-1;
-		boolean isHorizontal = true;
+		boolean isHorizontal = orientation.getValue();
 		
 		try {
 			BS.placeShip(shipClass, column, row, isHorizontal);
 			updateGrid();
+			status.setText("Whoop!");
 		} catch (OutOfBoundsException oob) {
-
+			status.setText("Noob");
 		} catch (AlreadyPlacedException ap) {
-
+			status.setText("Noob");
 		} catch (SquareOccupiedException so) {
-			
+			status.setText("Noob");
 		}
 	}
 

@@ -151,4 +151,10 @@ public class BattleshipControllerImp implements BattleshipController {
 		return list;
 	}
 
+	@Override
+	public void setupDone() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

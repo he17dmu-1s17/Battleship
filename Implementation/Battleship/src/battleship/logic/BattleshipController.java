@@ -33,4 +33,6 @@ public interface BattleshipController {
 
 	public ObservableList<ShipClass> getShipList();
 
+	public void setupDone();
+
 }
