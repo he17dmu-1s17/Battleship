@@ -17,14 +17,22 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public boolean isReadyToStart() {
+
 		if (player1 != null && player2 != null) {
-			HashMap p1ships = player1.getShips();
-			HashMap p2ships = player2.getShips();
+			HashMap<ShipClass, Ship> p1ships = player1.getShips();
+			HashMap <ShipClass,Ship>p2ships = player2.getShips();
 			ShipClass[] shipClasses = ShipClass.values();
-			isReadyToStart=true;
-			for(int i=0; i<shipClasses.length;i++) {
-				Ship p1Ship= (Ship) p1ships.get(shipClasses[i]);
-				Ship p2Ship= (Ship) p2ships.get(shipClasses[i]);
+			isReadyToStart = true;
+			for (int i = 0; i < shipClasses.length; i++) {
+				Ship p1Ship = (Ship) p1ships.get(shipClasses[i]);
+				Ship p2Ship = (Ship) p2ships.get(shipClasses[i]);
+				boolean isP1ShipPlaced = p1Ship.isPlaced();
+				boolean isP2ShipPlaced = p2Ship.isPlaced();
+				if (isP1ShipPlaced == false || isP2ShipPlaced == false) {
+					isReadyToStart = false;
+					break;
+				}
+
 			}
 		}
 		return false;
@@ -51,7 +59,8 @@ public class BattleshipControllerImp implements BattleshipController {
 	}
 
 	@Override
-	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal) throws AlreadyPlacedException {
+	public void placeShip(ShipClass shipClass, int column, int row, boolean isHorizontal)
+			throws AlreadyPlacedException {
 		currentPlayer.placeShip(shipClass, column, row, isHorizontal);
 	}
 
@@ -62,11 +71,11 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public void endTurn() {
-		if(getWinner()==null) {
-			if(currentPlayer==player1)
-				currentPlayer=player2;
-			else 
-				currentPlayer=player1;
+		if (getWinner() == null) {
+			if (currentPlayer == player1)
+				currentPlayer = player2;
+			else
+				currentPlayer = player1;
 		}
 
 	}
@@ -93,21 +102,21 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	private Player endGame() {
 		// vi skal laver allShipsSunk metud i Player
-		Player winner=null;
+		Player winner = null;
 		if (player1.allShipsSunk()) {
 			winner = player2;
 			gameOver = true;
-		} 
+		}
 		if (player2.allShipsSunk()) {
 			winner = player1;
 			gameOver = true;
-		} 
+		}
 		return winner;
 	}
 
 	@Override
 	public Grid getFleetGrid() {// vi har glemt den i interface
-		if(!gameStarted)
+		if (!gameStarted)
 			return currentPlayer.getFleetGrid();
 		if (!isGameOver())
 			return null;
