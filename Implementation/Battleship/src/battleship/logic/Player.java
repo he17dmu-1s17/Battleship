@@ -1,5 +1,6 @@
 package battleship.logic;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface Player {
@@ -15,6 +16,6 @@ public interface Player {
 	public Grid getFleetGrid();
 
 	public boolean allShipsSunk();//vi mangle den i DCD Diagram og jeg hat tilfæget den Shahnaz
-	public List[] getShips(); //vi mangle den i DCD Diagram og jeg hat tilfæget den Shahnaz
+	public HashMap getShips(); //vi mangle den i DCD Diagram og jeg hat tilfæget den Shahnaz
 	
 }

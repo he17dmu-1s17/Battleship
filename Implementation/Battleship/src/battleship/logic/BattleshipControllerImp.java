@@ -1,4 +1,7 @@
 package battleship.logic;
+
+import java.util.HashMap;
+
 public class BattleshipControllerImp implements BattleshipController {
 	private Player player1;
 	private Player player2;
@@ -14,7 +17,16 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public boolean isReadyToStart() {
-
+		if (player1 != null && player2 != null) {
+			HashMap p1ships = player1.getShips();
+			HashMap p2ships = player2.getShips();
+			ShipClass[] shipClasses = ShipClass.values();
+			isReadyToStart=true;
+			for(int i=0; i<shipClasses.length;i++) {
+				Ship p1Ship= (Ship) p1ships.get(shipClasses[i]);
+				Ship p2Ship= (Ship) p2ships.get(shipClasses[i]);
+			}
+		}
 		return false;
 	}
 
@@ -88,7 +100,9 @@ public class BattleshipControllerImp implements BattleshipController {
 
 	@Override
 	public Grid getFleetGrid() {// vi har glemt den i interface
-		while (!isGameOver())
+		if(!gameStarted)
+			return curentPlayer.getFleetGrid();
+		if (!isGameOver())
 			return null;
 		return curentPlayer.getFleetGrid();
 

@@ -1,6 +1,7 @@
 package battleship.logic;
 
-import java.util.List;
+import java.util.HashMap;
+
 
 public class PlayerImp implements Player {
 
@@ -41,7 +42,7 @@ public class PlayerImp implements Player {
 	}
 
 	@Override
-	public List[] getShips() {
+	public HashMap getShips() {
 		// TODO Auto-generated method stub
 		return null;
 	}
