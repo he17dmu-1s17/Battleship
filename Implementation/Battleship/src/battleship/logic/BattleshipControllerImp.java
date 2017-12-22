@@ -8,7 +8,7 @@ import javafx.collections.ObservableList;
 public class BattleshipControllerImp implements BattleshipController {
 	private Player player1;
 	private Player player2;
-	private Player currentPlayer;
+	private Player currentPlayer = player1;
 	private boolean isReadyToStart;
 	private boolean gameOver;
 	private boolean gameStarted;// jeg har tilføjet den vi mangler den i complate DCD
