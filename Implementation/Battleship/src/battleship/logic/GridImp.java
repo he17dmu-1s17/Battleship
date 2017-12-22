@@ -51,9 +51,17 @@ public class GridImp implements Grid {
 	}
 
 	@Override
-	public Square shoot(int column, int row) {
+	public Square shoot(int column, int row) throws AlreadyShotException {
 		squares[column][row].receiveShot();
 		return squares[column][row];
+	}
+	
+	public Square getSquare(int column, int row) {
+		return squares[column][row];
+	}
+	public boolean isOccupied(int column, int row){
+		return squares[column][row].isOccupied();
+	
 	}
 
 }
