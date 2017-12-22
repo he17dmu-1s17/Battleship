@@ -83,7 +83,7 @@ public class SetFleetController {
 	}
 	
 	private void updateGrid() {
-		GridImp grid = BS.getFleetGrid();
+		Grid grid = BS.getFleetGrid();
 		for (int column = 1; column < size; column++) {
 			for (int row = 1; row < size; row++) {
 				if (grid.isOccupied(column-1, row-1)) {
