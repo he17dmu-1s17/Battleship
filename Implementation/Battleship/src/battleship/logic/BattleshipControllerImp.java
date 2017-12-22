@@ -27,8 +27,8 @@ public class BattleshipControllerImp implements BattleshipController {
 	public boolean isReadyToStart() {
 
 		if (player1 != null && player2 != null) {
-			HashMap<ShipClass, Ship> p1ships = player1.getShips();
-			HashMap<ShipClass, Ship> p2ships = player2.getShips();
+			HashMap<ShipClass, ShipImp> p1ships = player1.getShips();
+			HashMap<ShipClass, ShipImp> p2ships = player2.getShips();
 			ShipClass[] shipClasses = ShipClass.values();
 			isReadyToStart = true;
 			for (int i = 0; i < shipClasses.length; i++) {
@@ -166,7 +166,7 @@ public class BattleshipControllerImp implements BattleshipController {
 	public boolean isCurrentPlayerReady() {
 		boolean isCurrentPlayerReadyToStart = true;
 		
-			HashMap<ShipClass, Ship> haha = currentPlayer.getShips();
+			HashMap<ShipClass, ShipImp> haha = currentPlayer.getShips();
 			ShipClass[] shipClasses = ShipClass.values();
 			for (int i = 0; i < shipClasses.length; i++) {
 				Ship p1Ship = (Ship) haha.get(shipClasses[i]);

@@ -14,7 +14,7 @@ public interface Player {
 	public Grid getFleetGrid();
 
 	public boolean allShipsSunk();//vi mangle den i DCD Diagram og jeg hat tilfæget den Shahnaz
-	public HashMap getShips(); //vi mangle den i DCD Diagram og jeg hat tilfæget den Shahnaz
+	public HashMap<ShipClass, ShipImp> getShips(); //vi mangle den i DCD Diagram og jeg hat tilfæget den Shahnaz
 
 
 
