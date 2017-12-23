@@ -1,24 +1,29 @@
 package battleship.gui;
 
+import java.io.IOException;
 import battleship.BattleshipLauncher;
 import battleship.logic.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 public class SetFleetController {
 	private int size = 11;
 	BattleshipController BS = BattleshipLauncher.battleshipController;
 	ObservableList<Boolean> isHorizontal = FXCollections.observableArrayList(true, false);
 	ObservableList<ShipClass> fleets = BS.getShipList();
+	
 
 	@FXML
 	private GridPane fleetBoard;
@@ -58,9 +63,19 @@ public class SetFleetController {
 
 	@FXML
 	void done(ActionEvent event) {
-		if (BS.isCurrentPlayerReady()) {
+		if (BS.isReadyToStart()) {
 			BS.setupDone();
-			playerName.setText(BS.getCurrentPlayerName());
+			try {
+				GridPane playGrid = (GridPane)FXMLLoader.load(getClass().getClassLoader().getResource("Play.fxml"));
+				Scene playScene = new Scene(playGrid);
+				Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
+				window.setScene(playScene);
+				window.setTitle("Battleship");
+				window.show();
+			} catch (IOException e) {}
+		} else if (BS.isCurrentPlayerReady()) {
+			BS.setupDone();
+			setPlayerName();
 			status.setText("Next player");
 			updateGrid();
 		} else {
@@ -69,7 +84,7 @@ public class SetFleetController {
 	}
 
 	@FXML
-	void setship(ActionEvent event) {
+	private void setship(ActionEvent event) {
 		ShipClass shipClass = fleet.getValue();
 		int column = -1;
 		int row = -1;
@@ -130,7 +145,7 @@ public class SetFleetController {
 		fleet.getSelectionModel().select(0);
 	}
 
-	public ToggleButton isSelected() {
+	private ToggleButton isSelected() {
 		for (int column = 1; column < size; column++) {
 			for (int row = 1; row < size; row++) {
 				ToggleButton toggle = (ToggleButton) getNodeFromGridPane(fleetBoard, column, row);
@@ -140,5 +155,9 @@ public class SetFleetController {
 			}
 		}
 		return null;
+	}
+	
+	public void setPlayerName() {
+		playerName.setText(BS.getCurrentPlayerName());
 	}
 }

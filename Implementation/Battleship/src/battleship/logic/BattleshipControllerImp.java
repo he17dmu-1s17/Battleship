@@ -40,7 +40,6 @@ public class BattleshipControllerImp implements BattleshipController {
 					isReadyToStart = false;
 					break;
 				}
-
 			}
 		}
 		return isReadyToStart;
