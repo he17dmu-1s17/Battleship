@@ -34,7 +34,7 @@ public class GridImp implements Grid {
 						}
 					}
 					for (int siz = size; siz > 0; column++, siz--) {
-						 if (unOccupied = true) {
+						 if (unOccupied == true) {
 								squares[column][row].placeShip(ship);
 							}
 					}
