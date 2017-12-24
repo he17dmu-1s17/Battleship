@@ -260,7 +260,7 @@
             <Font size="70.0" />
          </font>
       </Label>
-      <GridPane fx:id="playerTwoTarget" maxHeight="550.0" maxWidth="550.0" minHeight="550.0" minWidth="550.0" prefHeight="550.0" prefWidth="550.0" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="4" setDisable="true">
+      <GridPane fx:id="playerTwoTarget" maxHeight="550.0" maxWidth="550.0" minHeight="550.0" minWidth="550.0" prefHeight="550.0" prefWidth="550.0" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="4">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
