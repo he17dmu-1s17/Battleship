@@ -1,5 +1,6 @@
 package battleship.gui;
 
+import battleship.BattleshipLauncher;
 import battleship.logic.BattleshipController;
 import battleship.logic.BattleshipControllerImp;
 import battleship.logic.Grid;
@@ -13,6 +14,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
 public class PlayController {
+	
+	BattleshipController controller = BattleshipLauncher.battleshipController;
 
 	@FXML
 	private GridPane playerOneTarget;
@@ -41,7 +44,7 @@ public class PlayController {
 			playerTwoTarget.setDisable(false);
 		}
 	}
-	BattleshipController controller = new BattleshipControllerImp();
+	
 	private void setPlayerName() {
 		
 		PlayerName.setText(controller.getPlayer1Name());
@@ -55,6 +58,7 @@ public class PlayController {
 			updateGrid(playerTwoTarget, controller.getTargetGrid(isPlayerOnesTurn()));
 		}
 	}
+	
 	private boolean isPlayerOnesTurn() {
 		return controller.getPlayer1Name().equals(controller.getCurrentPlayerName());
 	}
@@ -63,7 +67,7 @@ public class PlayController {
 		SetFleetController setFleetController = new SetFleetController();
 		for(int column = 0; column < 10; column++) {
 			for(int row = 0; row < 10; row++) {
-				Button button = (Button) setFleetController.getNodeFromGridPane(grid, column, row);
+				Button button = (Button) setFleetController.getNodeFromGridPane(grid, column+1, row+1);
 				SquareStatus status = currentPlayerGrid.getSquareStatus(column,row);
 				switch (status) {
 				case Hit:
