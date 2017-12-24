@@ -66,13 +66,16 @@ public class SetFleetController {
 		if (BS.isReadyToStart()) {
 			BS.setupDone();
 			try {
-				GridPane playGrid = (GridPane)FXMLLoader.load(getClass().getClassLoader().getResource("Play.fxml"));
+				FXMLLoader fxml = new FXMLLoader();
+				GridPane playGrid = (GridPane)fxml.load(BattleshipLauncher.class.getResource("gui/Play.fxml").openStream());
 				Scene playScene = new Scene(playGrid);
 				Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
 				window.setScene(playScene);
 				window.setTitle("Battleship");
 				window.show();
-			} catch (IOException e) {}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		} else if (BS.isCurrentPlayerReady()) {
 			BS.setupDone();
 			setPlayerName();

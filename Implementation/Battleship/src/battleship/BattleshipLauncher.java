@@ -13,10 +13,10 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class BattleshipLauncher extends Application {
-	static FXMLLoader fxml = null;
+	public static FXMLLoader fxml = null;
 	private SetFleetController setFleetGUI = null;
 	public static BattleshipControllerImp battleshipController;
-	private static GridPane root;
+	public GridPane root;
 	
 	@Override
 	public void start(Stage primaryStage) {
